@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anvil-renyi-lora"
+version = "0.1.0"
+description = "Polar Newton-Schulz LoRA optimization (Anvil2), SVD-free Renyi-2 effective-rank regularization, and FP32 W_soup merging."
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[tool.setuptools.packages.find]
+include = ["anvil_renyi_lora*"]
